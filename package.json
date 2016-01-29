@@ -1,0 +1,27 @@
+{
+  "name": "gulp-multi-dest",
+  "version": "0.0.1",
+  "description": "Just like gulp dest but supports multiple output paths",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdelmonte/gulp-multi-dest.git"
+  },
+  "keywords": [
+    "gulp",
+    "multiple",
+    "dest",
+    "multi",
+    "write",
+    "destination"
+  ],
+  "author": "Kelvin Del Monte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kdelmonte/gulp-multi-dest/issues"
+  },
+  "homepage": "https://github.com/kdelmonte/gulp-multi-dest#readme"
+}
