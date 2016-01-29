@@ -1,6 +1,6 @@
 {
   "name": "gulp-multi-dest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Just like gulp dest but supports multiple output paths",
   "main": "index.js",
   "scripts": {
