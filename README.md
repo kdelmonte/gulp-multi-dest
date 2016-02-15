@@ -19,7 +19,7 @@ var destOptions = {
 
 gulp.task('copy', function() {
   return gulp.src('./js/*.js')
-    .pipe(gulp.dest(['./dist1/js', './dist2/js'], destOptions));
+    .pipe(multiDest(['./dist1/js', './dist2/js'], destOptions));
 });
 ```
 
