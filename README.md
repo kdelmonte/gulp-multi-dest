@@ -3,6 +3,8 @@ Just like gulp dest but supports multiple output paths
 
 ## Install
 
+[![NPM](https://nodei.co/npm/gulp-multi-dest.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-multi-dest/)
+
 ```
 npm install gulp-multi-dest --save
 ```
