@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/kdelmonte/gulp-multi-dest/issues"
   },
-  "homepage": "https://github.com/kdelmonte/gulp-multi-dest#readme"
+  "homepage": "https://github.com/kdelmonte/gulp-multi-dest#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "through2": "^2.0.1"
+  }
 }
