@@ -8,6 +8,9 @@ module.exports = function(paths, options) {
 	options = options || {};
 	var files = [];
 
+
+	if (typeof (paths) === 'string') { paths = [paths]; }
+
 	var dests = paths.map(function(path) {
 		return gulp.dest(path, options);
 	});
