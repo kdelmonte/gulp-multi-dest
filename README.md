@@ -12,7 +12,7 @@ npm install gulp-multi-dest --save
 ## Usage 
 
 ```
-var gulp - require('gulp');
+var gulp = require('gulp');
 var multiDest = require('gulp-multi-dest');
 
 var destOptions = {
