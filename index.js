@@ -4,40 +4,36 @@ var through = require('through2');
 var gulp = require('gulp');
 var async = require('async');
 
-module.exports = function(paths, options) {
+module.exports = function (paths, options) {
 	options = options || {};
-	var files = [];
+	var writtenFiles = [];
 
+	if (typeof (paths) === 'string') {
+		paths = [paths];
+	}
 
-	if (typeof (paths) === 'string') { paths = [paths]; }
-
-	var dests = paths.map(function(path) {
+	var dests = paths.map(function (path) {
 		return gulp.dest(path, options);
 	});
 
-	function writeFilesToMultipleDestinations(file, done) {
-		async.each(dests, function(dest, wroteOne) {
-			dest.write(file, wroteOne);
+	function writeFileToMultipleDestinations(file, encoding, done) {
+		async.each(dests, function (dest, wroteFileToDest) {
+			var fileClone = file.clone();
+			dest.write(fileClone, function () {
+				writtenFiles.push(fileClone);
+				wroteFileToDest();
+			});
 		}, done);
 	}
 
-	var holdFile = function(file, encoding, done) {
-		files.push(file);
+	function flushCreatedFiles(done) {
+		var stream = this;
+		for(var i = 0; i < writtenFiles.length; i++){
+			var file = writtenFiles[i];
+			stream.push(file);
+		}		
 		done();
-	};
+	}
 
-	var flushAllFiles = function(done) {
-		var transform = this;
-
-		function outputFiles() {
-			files.forEach(function(file) {
-				transform.push(file);
-			});
-			done();
-		}
-
-		async.each(files, writeFilesToMultipleDestinations, outputFiles);
-	};
-
-	return through.obj(holdFile, flushAllFiles);
+	return through.obj(writeFileToMultipleDestinations, flushCreatedFiles);
 };

@@ -25,5 +25,6 @@ gulp.task('copy', function() {
 });
 ```
 
-## TODO
-- Write tests! In a rush right now.
+## Test
+
+To start the tests run `npm install` and then `npm run test`.
