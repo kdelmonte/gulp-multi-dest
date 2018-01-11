@@ -1,12 +1,10 @@
-# gulp-multi-dest
+# gulp-multi-dest [![Build Status](https://travis-ci.org/kdelmonte/gulp-multi-dest.svg?branch=master)](https://travis-ci.org/kdelmonte/gulp-multi-dest)
 Just like gulp dest but supports multiple output paths
 
 ## Install
 
-[![NPM](https://nodei.co/npm/gulp-multi-dest.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-multi-dest/)
-
 ```
-npm install gulp-multi-dest --save
+npm install gulp-multi-dest --save-dev
 ```
 
 ## Usage 
